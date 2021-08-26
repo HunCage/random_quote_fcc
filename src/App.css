@@ -1,0 +1,99 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+main {
+	background-color: #3c485f;
+	width: 100vw;
+	height: 100vh;
+	flex-direction: column;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	vertical-align: middle;
+}
+
+#quote-box {
+	position: relative;
+	display: flex;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	flex-direction: column;
+	padding: 20px;
+	background: #eee;
+	width: 600px;
+	height: 350px;
+	clear: both;
+	padding: 32px;
+	margin: 20px;
+	border-radius: 8px;
+	border: 3px dashed orange;
+}
+
+#text {
+	font-size: 25px;
+	padding: 8px;
+	margin: 12px;
+	width: 600px;
+	height: 250px;
+}
+
+hr {
+	margin-top: 8px;
+	height: 1px;
+	color: rgb(8, 255, 255);
+}
+
+#author {
+	font-family: cursive;
+	font-style: italic;
+	margin: 8px;
+	text-align: right;
+}
+
+div.btns {
+	bottom: 3%;
+	position: absolute;
+	display: block;
+	justify-content: space-between;
+	height: 50px;
+	width: 100%;
+}
+
+#new-quote {
+	position: relative;
+	right: 11%;
+	cursor: pointer;
+	float: right;
+	font-size: 16px;
+	padding: 6px;
+	width: 110px;
+	border-radius: 12px;
+	height: 42px;
+	border: 2px solid blue;
+	box-shadow: 2px 2px 3px black;
+}
+
+#new-quote:hover,
+#tweet-quote:hover {
+	transform: scale(1.05);
+	box-shadow: -2px -2px 3px black;
+}
+
+#tweet-quote {
+	background-color: orange;
+	text-align: center;
+	position: relative;
+	float: left;
+	width: 42px;
+	height: 81%;
+	box-shadow: 2px 2px 3px black;
+	font-size: 24px;
+	text-shadow: 2px 2px orange;
+	color: rgb(0, 140, 255);
+	border: 2px solid blue;
+	border-radius: 8px;
+	padding: 4px;
+}

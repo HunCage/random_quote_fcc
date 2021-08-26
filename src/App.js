@@ -7,26 +7,26 @@ const API =
 	"https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
 
 function App() {
-	const [randomNumber, setRandomNumber] = useState(0);
-
+	
 	const [quote, setQuote] = useState("Click for Quote");
-
+	const [randomNumber, setRandomNumber] = useState(0);
+	
 	const [author, setAuthor] = useState("nobody");
 	const [quotesArray, setQuotesArray] = useState(null);
-
+	
 	const [currentColor, setCurrentColor] = useState("#BBBB1A");
-
+	
 	const fetchQuote = async (url) => {
-
+		
 		const res = await fetch(url);
 		const parsedQuotes = await res.json();
 		setQuotesArray(parsedQuotes.quotes);
 	};
-
+	
 	useEffect(() => {
 		fetchQuote(API);
 	}, [API]);
-
+	
 	const generateQuotes = () => {
 		let randomNum = Math.floor(Math.random() * quotesArray.length);
 		setRandomNumber(randomNum);
